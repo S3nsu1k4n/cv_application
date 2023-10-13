@@ -1,8 +1,8 @@
 
-const ShowInfo = ({ information, general}) => {
+const ShowInfo = ({ information, state}) => {
   return (
     <div>
-      { information && information.map( info => {return <p key={info}>{info}: { general ? general[info] : '???'}</p> }) }
+      { information && information.map( info => {return <p key={info}>{info}: { state ? state[info] : '???'}</p> }) }
     </div>
   )
 }

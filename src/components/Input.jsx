@@ -1,12 +1,12 @@
-const Input = ({ name, setGeneral, general }) => {
+const Input = ({ name, setState, state }) => {
   const update_value = (e) => {
-    const newGeneral = {...general, [e.target.name]: e.target.value}
-    setGeneral(newGeneral);
+    const newState = {...state, [e.target.name]: e.target.value}
+    setState(newState);
   }
   return (
     <>
       <label htmlFor={name} name={name}>{name}: </label>
-      <input type="text" name={name} onInput={update_value} value={general[name]}/>
+      <input type="text" name={name} onInput={update_value} value={state[name]}/>
     </>
   )
 }
